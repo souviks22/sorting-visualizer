@@ -1,0 +1,18 @@
+.tile {
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 100ms ease-in;
+}
+
+.tile:hover {
+    border: 2px solid #2f2f2f;
+    cursor: pointer;
+}
+
+.arrow {
+    transition: 100ms ease-in;
+}
+
+.tile:hover .arrow {
+    transform: translateX(1rem);
+}
