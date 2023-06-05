@@ -1,47 +1,47 @@
 .spin {
-  top: 10%;
-  left: 10%;
+  top: 10px;
+  left: 10px;
   animation: spinner 30s infinite;
 }
 
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
-    background-color: #aa15aa;
+    background-color: #aa15aaae;
   }
 
   15% {
     transform: rotateX(360deg);
-    background-color: #3131a6;
+    background-color: #3131a6ae;
   }
 
   30% {
     transform: rotateY(0deg);
-    background-color: #3455d9;
+    background-color: #3455d9ae;
   }
 
   45% {
     transform: rotate(360deg);
-    background-color: #3ecd3e;
+    background-color: #3ecd3eae;
   }
 
   60% {
     transform: rotateX(0deg);
-    background-color: #f1f113;
+    background-color: #f1f113ae;
   }
 
   75% {
     transform: rotateY(360deg);
-    background-color: #e89d11;
+    background-color: #e89d11ae;
   }
 
   90% {
     transform: rotate(0deg);
-    background-color: #e21212;
+    background-color: #e21212ae;
   }
 
   100% {
     transform: rotateX(360deg);
-    background-color: #cb12cb;
+    background-color: #cb12cbae;
   }
 }

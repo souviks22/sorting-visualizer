@@ -16,3 +16,9 @@
 .tile:hover .arrow {
     transform: translateX(1rem);
 }
+
+@media (max-width:768px) {
+    .tile {
+        width: 100%;
+    }
+}
