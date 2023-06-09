@@ -5,15 +5,16 @@
 }
 
 .tile:hover {
-    border: 2px solid #171717;
-    cursor: pointer;
-}
-
-.tile_dark{
+    background-color: #f0f8ff;
     border: 2px solid #171717;
 }
 
-.tile_dark:hover{
+.tile_dark {
+    border: 2px solid #171717;
+}
+
+.tile_dark:hover {
+    background-color: #1f1f1f;
     border: 2px solid white;
 }
 

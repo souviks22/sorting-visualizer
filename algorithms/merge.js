@@ -23,7 +23,7 @@ function sort(arr, aux, lo, hi) {
 }
 
 function mergeSort(arr) {
-  const aux = [...arr]
+  const aux = new Array(arr.length)
   sort(arr, aux, 0, arr.length - 1)
 }
 
