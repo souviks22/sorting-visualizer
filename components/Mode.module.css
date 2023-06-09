@@ -1,0 +1,11 @@
+.mode {
+  top: 5%;
+  right: 5%;
+  font-size: 1.5rem;
+}
+
+@media (max-width:768px) {
+  .mode {
+    top: 3%;
+  }
+}

@@ -33,3 +33,5 @@ function sort(arr, lo, hi) {
 function quickSort(arr) {
   sort(arr, 0, arr.length - 1)
 }
+
+export default quickSort

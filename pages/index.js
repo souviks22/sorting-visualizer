@@ -1,14 +1,21 @@
+import { useContext } from 'react'
+import { ModeContext } from '@/store/mode-context'
+import Head from 'next/head'
 import Tile from '@/components/Tile'
-import SpinnerBox from '@/components/SpinnerBox'
 
 const Home = ({ algos }) => {
-  return (<div className='flex flex-col'>
-    <h1 className='display-1 text-center p-5 m-3 z-20'>Sorting Visualization</h1>
-    <div className='tiles flex justify-around p-20'>
-      {algos.map(algo => <Tile key={algo.name} {...algo} />)}
+  const { isDarkMode } = useContext(ModeContext)
+  return (<>
+    <Head>
+      <title>Sorting Visualization</title>
+    </Head>
+    <div className={`flex flex-col h-screen ${isDarkMode && 'bg-neutral-900 text-white'}`}>
+      <h1 className='display-1 text-center p-5 m-3 z-20 cursor-default'>Sorting Visualization</h1>
+      <div className='tiles flex justify-around p-20'>
+        {algos.map(algo => <Tile key={algo.name} {...algo} />)}
+      </div>
     </div>
-    <SpinnerBox />
-  </div>)
+  </>)
 }
 
 export async function getStaticProps() {
