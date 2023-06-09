@@ -10,7 +10,7 @@ const Tile = ({ name, description }) => {
       <h2>{name}</h2>
       <AiOutlineArrowRight className={`${styles.arrow} mx-3`} />
     </section >
-    <section className={`text-xs text-slate-600 ${isDarkMode && 'text-slate-200'}`}>{description}</section>
+    <section className={`text-xs ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>{description}</section>
   </div >)
 }
 

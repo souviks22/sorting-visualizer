@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @media (max-width:768px) {
+  .home {
+    height: max-content;
+  }
+
   .tiles {
     flex-direction: column;
     padding: 2rem;

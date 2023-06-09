@@ -9,7 +9,7 @@ const Home = ({ algos }) => {
     <Head>
       <title>Sorting Visualization</title>
     </Head>
-    <div className={`flex flex-col h-screen ${isDarkMode && 'bg-neutral-900 text-white'}`}>
+    <div className={`home h-screen flex flex-col ${isDarkMode && 'bg-neutral-900 text-white'}`}>
       <h1 className='display-1 text-center p-5 m-3 z-20 cursor-default'>Sorting Visualization</h1>
       <div className='tiles flex justify-around p-20'>
         {algos.map(algo => <Tile key={algo.name} {...algo} />)}
