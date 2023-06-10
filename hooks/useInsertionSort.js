@@ -1,4 +1,4 @@
-function insertionSort(arr) {
+const useInsertionSort = (arr, setCurrentArray) => {
 
   for (let i = 0; i < arr.length; i++) {
 
@@ -8,6 +8,7 @@ function insertionSort(arr) {
         const temp = arr[j]
         arr[j] = arr[j - 1]
         arr[j - 1] = temp
+        setCurrentArray(arr)
       }
 
       else break
@@ -15,4 +16,4 @@ function insertionSort(arr) {
   }
 }
 
-export default insertionSort
+export default useInsertionSort
