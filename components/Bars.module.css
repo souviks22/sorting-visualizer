@@ -4,7 +4,7 @@
 
 @media (max-width:768px) {
   .bar {
-    width: 1rem;
+    width: 0.75rem;
     font-size: x-small;
   }
 }
