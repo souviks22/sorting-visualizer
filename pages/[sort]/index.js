@@ -46,7 +46,7 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps() {
-  const arr = Array.from({ length: 30 }, () => Math.ceil(Math.random() * 100))
+  const arr = Array.from({ length: 100 }, () => Math.ceil(Math.random() * 100))
   return {
     props: { arr },
     revalidate: 24 * 60 * 60

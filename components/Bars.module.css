@@ -1,10 +1,9 @@
 .bar {
-  width: 2rem;
+  width: 0.5rem;
 }
 
 @media (max-width:768px) {
   .bar {
     width: 0.5rem;
-    font-size: x-small;
   }
 }
