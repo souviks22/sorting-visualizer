@@ -1,6 +1,6 @@
 import Trigger from "@/components/Trigger"
 
-const InsertionSort = ({ arr, changeCurrentArray }) => {
+const InsertionSort = ({ arr, changeCurrentArray, changeSortedRange }) => {
 
   const sortHandler = () => {
     for (let i = 0; i < arr.length; i++) {
@@ -14,6 +14,7 @@ const InsertionSort = ({ arr, changeCurrentArray }) => {
           }
           else break
         }
+        changeSortedRange(0, i)
       }, i * 300)
     }
   }

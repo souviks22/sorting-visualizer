@@ -15,24 +15,25 @@ const algorithms = {
 }
 
 const Sort = ({ arr }) => {
-
   const { sort } = useRouter().query
-  const Sort = algorithms[sort]
+  const CurrentSort = algorithms[sort]
   const heading = sort.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
   const [currentArray, setCurrentArray] = useState(arr)
   const changeArray = async (changedArray) => {
     setCurrentArray([...changedArray])
   }
   const { isDarkMode } = useContext(ModeContext)
+  const [range, setRange] = useState([-1, -1])
+  const changeSortedRange = (lo, hi) => setRange([lo, hi])
 
   return (<>
     <Head>
       <title>{heading}</title>
     </Head>
     <div className={`h-screen flex flex-col justify-center items-center ${isDarkMode && 'dark'}`}>
-      <Bars arr={currentArray} isDarkMode={isDarkMode} />
+      <Bars arr={currentArray} sortedRange={range} isDarkMode={isDarkMode} />
       <h1 className='display-6 m-3'>{heading}</h1>
-      <Sort arr={arr} changeCurrentArray={changeArray} />
+      <CurrentSort arr={arr} changeCurrentArray={changeArray} changeSortedRange={changeSortedRange} />
     </div>
   </>)
 }

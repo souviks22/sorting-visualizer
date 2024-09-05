@@ -1,6 +1,6 @@
 import Trigger from "@/components/Trigger"
 
-const SelectionSort = ({ arr, changeCurrentArray }) => {
+const SelectionSort = ({ arr, changeCurrentArray, changeSortedRange }) => {
 
   const sortHandler = () => {
     for (let i = 0; i < arr.length; i++) {
@@ -13,6 +13,7 @@ const SelectionSort = ({ arr, changeCurrentArray }) => {
         arr[i] = arr[min]
         arr[min] = temp
         changeCurrentArray(arr)
+        changeSortedRange(0, i)
       }, i * 300)
     }
   }

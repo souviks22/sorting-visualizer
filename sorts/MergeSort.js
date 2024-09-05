@@ -1,11 +1,9 @@
 import Trigger from "@/components/Trigger"
 
-const MergeSort = ({ arr, changeCurrentArray }) => {
+const MergeSort = ({ arr, changeCurrentArray, changeSortedRange }) => {
 
   let delay = 0
-
   const sortHandler = () => {
-
     const merge = (arr, aux, lo, mid, hi) => {
       setTimeout(() => {
         for (let i = lo; i <= hi; i++) aux[i] = arr[i]
@@ -17,6 +15,7 @@ const MergeSort = ({ arr, changeCurrentArray }) => {
           else arr[k] = aux[i++]
           changeCurrentArray(arr)
         }
+        changeSortedRange(lo, hi)
       }, delay++ * 300)
     }
 
