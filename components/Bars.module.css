@@ -4,6 +4,7 @@
 
 @media (max-width:768px) {
   .bar {
-    width: 0.5rem;
+    width: 0.15rem;
+    margin: 0.25px;
   }
 }
